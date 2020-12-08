@@ -5,9 +5,7 @@
 	<groupId>com.cucumber.practise</groupId>
 	<artifactId>com.cucumber.practise</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<!-- 
-https://github.com/cucumber/cucumber-java-skeleton/blob/main/pom.xml
- -->
+	<!-- https://github.com/cucumber/cucumber-java-skeleton/blob/main/pom.xml -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
@@ -59,3 +57,13 @@ https://github.com/cucumber/cucumber-java-skeleton/blob/main/pom.xml
 		</plugins>
 	</build>
 </project>
+<!-- mvn test -Dcucumber.filter.tags="@smoke" 
+or if cucumber 4.x version
+
+mvn test -Dcucumber.options="-tags @smoke"
+mvn test -Dcucumber.options="src/main/test/resources/Dashboard.feature"
+mvn test -Dcucumber.options="-plugin junit:target/cucumber-reports/reports.html"  //change report file path dynamically
+
+
+//overrides the tags mentioned 
+	in runner class and executes from here -->

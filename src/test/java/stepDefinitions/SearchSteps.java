@@ -16,13 +16,13 @@ public class SearchSteps {
 	@When("i enter the group with name {string}")
 	public void i_enter_the_group_with_name(String string) {
 	    // Write code here that turns the phrase above into concrete actions
-		 System.out.println("step 2: Entered the group name ");
+		 System.out.println("step 2: Entered the group name "+string);
 	}
 
 	@Then("group with name {string} should be displayed")
 	public void group_with_name_should_be_displayed(String string) {
 	    // Write code here that turns the phrase above into concrete actions
-		 System.out.println("step 3: group name should be displayed ");
+		 System.out.println("step 3: group name" +string +"should be displayed ");
 	}
 
 
