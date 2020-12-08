@@ -19,7 +19,7 @@ public class MyHooks {
 
 	}
 
-	@After(order = 1)
+	@After(order = 2)
 	public void closeBrowser() {
 		
 		System.out.println("Quit browser");
