@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 		glue= {"stepDefinitions", "src/test/java/myHooks"},
 		plugin= {"pretty", "html:target/cucumber-reports/report.html"},
 		monochrome= true,
-		dryRun = false,
-		tags = "@smoke",
-		publish = true  // only available in 6.9.0
+		dryRun = true,
+		tags = "@Regression",
+		publish = false  // only available in 6.9.0
 		)
 public class DashboardTest {
 

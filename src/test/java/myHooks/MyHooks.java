@@ -1,10 +1,15 @@
 package myHooks;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class MyHooks {
+	WebDriver driver;
 
 	@Before(order = 1)
 	public void launchBrowser() {
@@ -21,13 +26,15 @@ public class MyHooks {
 
 	@After(order = 2)
 	public void closeBrowser() {
-		
+
 		System.out.println("Quit browser");
 
 	}
 
 	@After(order = 1)
-	public void logout() {
+	public void logout(Scenario sc) {
+
+		System.out.println("Capture failed screenshot");
 
 		System.out.println("Logout app");
 	}
